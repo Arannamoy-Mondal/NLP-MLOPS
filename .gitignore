@@ -1,0 +1,15 @@
+.venv
+.ipynb_checkpoint
+.ipynb_checkpoints
+.virtual_documents
+__pycache__
+music
+audios
+2_mp3_to_text.json
+.env
+chromadb
+faiss_data
+Dataset
+.pkl
+mlruns
+mlartifacts
