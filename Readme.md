@@ -1,4 +1,4 @@
-# Setup
+# Contents
 - [Proxmox set up for gpu passthrough](#proxmox-set-up-for-gpu-passthrough)
 - [Ubuntu server setup](#ubuntu-server--for-maxmimum-hardware-usage)
 - [nividia gpu power limit in ubuntu server](#nividia-gpu-power-limit-in-ubuntu)
