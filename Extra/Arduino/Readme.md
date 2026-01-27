@@ -1,4 +1,6 @@
-1. <img src="IMG/1.png">
+1. 
+<br>
+<img src="IMG/1.png">
 
 ```cpp
 int pin3=3,pin1=1,pin2=2;
@@ -178,3 +180,408 @@ void loop()
 ```
 
 
+5. LDR(Light Dependent Sensor) Sensor:
+
+
+```cpp
+
+void setup()
+{
+  Serial.begin(9600);
+  
+}
+
+void loop()
+{
+  int data=analogRead(A0);
+  Serial.println(data);
+  delay(1000)
+}
+
+```
+
+5. PIR (Passive Infrared sensor) Motion Sensor:
+<img src="IMG/5-PIR-Motion-Sensor.png">
+
+```cpp
+int outputPin=3,inputPin=2,motion=LOW;
+void setup()
+{
+  //Serial.begin(9600);
+  pinMode(outputPin,OUTPUT);
+  pinMode(inputPin,INPUT);
+}
+
+void loop()
+{
+  motion=digitalRead(inputPin);
+  if(motion==HIGH)
+  {
+    digitalWrite(outputPin,HIGH);
+  } 
+  else
+  {
+  	digitalWrite(outputPin,LOW);
+  }
+   //digitalWrite(outputPin,HIGH);
+}
+
+
+```
+
+6. TCS 3200 (Color Sensor):
+
+<br>
+<img src="IMG/6 TCS 3200 Color Sensor.png" >
+
+```cpp
+const int s0 = 8;
+
+const int s1 = 9;
+
+const int s2 = 12;
+
+const int s3 = 11;
+
+const int out = 10;
+
+int redLed = 2;
+
+int greenLed = 3;
+
+int blueLed = 4;
+
+int red = 0;
+
+int green = 0;
+
+int blue = 0;
+
+void setup()
+
+{
+
+Serial.begin(9600);
+
+pinMode(s0, OUTPUT);
+
+pinMode(s1, OUTPUT);
+
+pinMode(s2, OUTPUT);
+
+pinMode(s3, OUTPUT);
+
+pinMode(out, INPUT);
+
+pinMode(redLed, OUTPUT);
+
+pinMode(greenLed, OUTPUT);
+
+pinMode(blueLed, OUTPUT);
+
+digitalWrite(s0, HIGH);
+
+digitalWrite(s1, HIGH);
+
+}
+
+
+void loop()
+
+{
+
+color();
+
+Serial.print("R Intensity:");
+
+Serial.print(red, DEC);
+
+Serial.print(" G Intensity: ");
+
+Serial.print(green, DEC);
+
+Serial.print(" B Intensity : ");
+
+Serial.print(blue, DEC);
+
+//Serial.println();
+
+if (red < blue && red < green && red < 20)
+
+{
+
+Serial.println(" - (Red Color)");
+
+digitalWrite(redLed, HIGH); // Turn RED LED ON
+
+digitalWrite(greenLed, LOW);
+
+digitalWrite(blueLed, LOW);
+
+}
+
+else if (blue < red && blue < green)
+
+{
+
+Serial.println(" - (Blue Color)");
+
+digitalWrite(redLed, LOW);
+
+digitalWrite(greenLed, LOW);
+
+digitalWrite(blueLed, HIGH); // Turn BLUE LED ON
+
+}
+
+else if (green < red && green < blue)
+
+{
+
+Serial.println(" - (Green Color)");
+
+digitalWrite(redLed, LOW);
+
+digitalWrite(greenLed, HIGH); // Turn GREEN LED ON
+
+digitalWrite(blueLed, LOW);
+
+}
+
+else{
+
+Serial.println();
+
+}
+
+delay(300);
+
+digitalWrite(redLed, LOW);
+
+digitalWrite(greenLed, LOW);
+digitalWrite(blueLed, LOW);
+
+}
+
+void color()
+
+{
+
+digitalWrite(s2, LOW);
+
+digitalWrite(s3, LOW);
+
+//count OUT, pRed, RED
+
+red = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
+
+digitalWrite(s3, HIGH);
+
+//count OUT, pBLUE, BLUE
+
+blue = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
+
+digitalWrite(s2, HIGH);
+
+//count OUT, pGreen, GREEN
+
+green = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
+
+}
+```
+
+
+7. Line Sensor:
+
+```cpp
+int ledPin = 9;
+
+int line = 2;
+
+int level = LOW;
+
+int state = 0;
+
+void setup()
+
+{
+
+pinMode(line,INPUT);
+
+pinMode(ledPin,OUTPUT);
+
+}
+
+void loop()
+
+{
+
+state = digitalRead(line);
+
+if(state == HIGH)
+
+{
+
+digitalWrite(ledPin,HIGH);
+
+level = HIGH;
+
+}
+
+else{
+
+digitalWrite(ledPin,LOW);
+
+level=LOW;
+
+}
+
+}
+```
+8. Ultrasonic Sensor/ Sonar Sensor:
+```cpp
+#define trigPin 13
+
+#define echoPin 12
+
+#define ledPin 11
+
+void setup() {
+
+Serial.begin(9600);
+
+pinMode(trigPin,OUTPUT);
+
+pinMode(echoPin,INPUT);
+
+pinMode(ledPin,OUTPUT);
+
+}
+
+void loop() {
+
+long duration , distance;
+
+digitalWrite(trigPin,LOW);
+
+delayMicroseconds(2);
+
+digitalWrite(trigPin,HIGH);
+
+delayMicroseconds(10);
+
+digitalWrite(trigPin,LOW);
+
+duration = pulseIn(echoPin,HIGH);
+
+distance = (duration/2) / 29.1;
+
+if(distance<10)
+
+{
+
+digitalWrite(ledPin,HIGH);
+
+
+}else{
+
+digitalWrite(ledPin,LOW);
+
+}
+
+Serial.print(distance);
+
+Serial.println("cm");
+
+delay(1500);
+
+}
+```
+9. IR Sensor:
+```cpp
+int ledPin = 9;
+
+int inputPin = 2;
+
+int object = LOW;
+
+int stat = 0;
+
+void setup()
+
+{
+
+pinMode(ledPin,OUTPUT);
+
+pinMode(inputPin,INPUT);
+
+}
+
+void loop()
+
+{
+
+stat = digitalRead(inputPin);
+
+if(stat == HIGH)
+
+{
+
+digitalWrite(ledPin,HIGH);
+
+object = HIGH;
+
+}else{
+
+digitalWrite(ledPin,LOW);
+
+object = LOW;
+
+}
+
+}
+```
+10. Touch Sensor:
+```cpp
+int ledPin = 9;
+
+int inputPin = 2;
+
+int touch = LOW;
+
+int stat = 0;
+
+void setup()
+
+{
+
+pinMode(ledPin,OUTPUT);
+
+pinMode(inputPin,INPUT);
+
+}
+
+void loop()
+
+{
+
+stat = digitalRead(inputPin);
+
+if(stat == HIGH)
+
+{
+
+digitalWrite(ledPin,HIGH);
+
+touch = HIGH;
+
+}else{
+
+digitalWrite(ledPin,LOW);
+
+touch = LOW;
+
+}
+
+}
+```
