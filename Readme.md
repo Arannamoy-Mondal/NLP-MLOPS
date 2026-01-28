@@ -440,3 +440,19 @@ RestartSec=1
 [Install]
 WantedBy=multi-user.target
 ```
+
+- Run without password:
+
+```bash
+sudo visudo
+```
+
+```bash
+username ALL=(ALL) NOPASSWD: /usr/bin/cpupower
+```
+
+`Just run this command no password needed:`
+
+```bash
+sudo cpupower frequency-set -u 6.0GHz
+```
