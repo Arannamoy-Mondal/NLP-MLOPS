@@ -73,7 +73,7 @@
 - Advantages:
     1. 
 - Disadvantages:
-    1. 
+    1. $\eta$ -> possibility to become zero.
 #### RMS Prop
 - Advantages:
     1. 
@@ -81,6 +81,19 @@
     1. 
 #### Adam Optimizers
 - Advantages:
-    1. 
+    1. Best all of the optimizers.
 - Disadvantages:
     1. 
+
+
+### Weight Initiating Techniques
+- Weights should be small
+- Weights should not be same
+- Weights should have good variance
+#### Uniform Distribution:
+#### Xavier/Glorot initialization
+#### Kaiming He Initialization
+
+### CNN - Convolutional NN
+### ANN - Artificial NN
+### RNN - Recurrent NN
