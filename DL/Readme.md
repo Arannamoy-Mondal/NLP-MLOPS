@@ -90,6 +90,7 @@
 - Weights should be small
 - Weights should not be same
 - Weights should have good variance
+
 #### Uniform Distribution:
 #### Xavier/Glorot initialization
 #### Kaiming He Initialization
