@@ -15,3 +15,4 @@ mlruns
 mlartifacts
 .continue
 .gradio
+*.h5
