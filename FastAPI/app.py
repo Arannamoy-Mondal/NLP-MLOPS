@@ -1,14 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi.responses import HTMLResponse
+import ollama
+import asyncio
 
-app=FastAPI()
-
-
-@app.get("/")
-def home():
-    return "Home"
-
-
-@app.put("/users:user_name")
-def user(user_name:str | None):
-    print(user_name,user_name)
+app = FastAPI()
 
