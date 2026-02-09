@@ -10,7 +10,7 @@ audios
 chromadb
 faiss_data
 Dataset
-.pkl
+*.pkl
 mlruns
 mlartifacts
 .continue
