@@ -456,3 +456,21 @@ username ALL=(ALL) NOPASSWD: /usr/bin/cpupower
 ```bash
 sudo cpupower frequency-set -u 6.0GHz
 ```
+
+
+# Sample yaml configuration for continue
+
+```yml
+name: Local Config
+version: 1.0.0
+schema: v1
+models: 
+  - name: "translategemma:latest"
+    provider: "ollama"
+    model: "translategemma:latest"
+    apiBase: "http://localhost:11434"
+    roles:
+      - chat
+      - edit
+      - apply
+```
