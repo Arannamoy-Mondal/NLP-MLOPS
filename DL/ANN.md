@@ -2,4 +2,6 @@
 graph LR;
     A(ANN) --> B(Classification)
     A(ANN) --> C(Regression)
+    B(Classification) --> D(Tabular Data)
+    C(Regression) --> D(Tabular Data)
 ```
