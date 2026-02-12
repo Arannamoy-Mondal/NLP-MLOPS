@@ -10,7 +10,7 @@ graph LR;
 
 `ANN`
 ```mermaid
-graph LR;
+graph TD;
   A((A)) --> E((E))
   A((A)) --> F((F))
   A((A)) --> G((G))
