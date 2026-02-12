@@ -8,6 +8,11 @@ graph LR;
 
 - Sequence of data does not matter for training.
 
+`ANN`
 ```mermaid
-
+graph LR;
+  A(()) --> E(())
+  B(()) --> F(())
+  C(()) --> G(())
+  D(()) --> H(())
 ```
