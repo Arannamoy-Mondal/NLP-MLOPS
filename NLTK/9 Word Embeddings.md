@@ -1,4 +1,4 @@
 ```mermaid
-graph LR;
-    Start --> End;;
+graph DOWN;
+    Word Embedding --> End;
 ```
