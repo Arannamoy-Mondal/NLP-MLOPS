@@ -1,4 +1,4 @@
 ```mermaid
-graph TD;
+graph TD;;
     Word Embedding --> End;
 ```
