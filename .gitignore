@@ -16,3 +16,4 @@ mlartifacts
 .continue
 .gradio
 *.h5
+logs
