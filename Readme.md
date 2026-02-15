@@ -6,7 +6,7 @@
 - [using podman ubuntu fedora as a podman os vs code ssh for lightweight dev environments](#using-podman--ubuntufedora-as-a-podman-os-vs-code-ssh-for-lightweight-dev-environments)
 - [Run jupyterlab inside podman or docker with anaconda on ubuntu](#run-jupyterlab-inside-podman-with-anaconda-on-ubuntu)
 - [CPU frequency control in ubuntu server](#cpu-frequency-control-in-ubuntu-server)
-
+- Online resources. Colah's blog
 # Proxmox set up for gpu passthrough
 #### 🛠️ Edit GRUB
 - Open the GRUB configuration file:
