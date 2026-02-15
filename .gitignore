@@ -17,3 +17,6 @@ mlartifacts
 .gradio
 *.h5
 logs
+.env
+*.pdf
+faiss_index

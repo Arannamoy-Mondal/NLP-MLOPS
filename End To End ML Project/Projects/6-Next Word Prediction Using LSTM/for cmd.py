@@ -76,7 +76,7 @@ model.summary()
 early_stopping=tf.keras.callbacks.EarlyStopping(monitor='val_loss',patience=5,restore_best_weights=True)
 
 # %%
-history=model.fit(X_train,y_train,epochs=50000,validation_data=(X_test,y_test),verbose=1)
+history=model.fit(X_train,y_train,epochs=1000,validation_data=(X_test,y_test),verbose=1)
 
 # %%
 def predict_next_word(model,tokenizer,text,max_sequence_len):
