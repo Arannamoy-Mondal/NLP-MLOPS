@@ -1,4 +1,4 @@
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect,Body
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect,Body,Path
 from fastapi.responses import HTMLResponse
 import ollama
 import asyncio
@@ -23,13 +23,14 @@ async def get_all_book():
 
 # Path Parameters
 @app.get("/book/{param}")
-async def specific_book(param):
+async def specific_book(param=Path(max_length=2)):
     for book in books:
        if book.get('name').casefold()==param.casefold():
         print(param.casefold())
         return book
     print(param)
     return None
+
 
 # Query Parameters
 @app.get("/book/")
@@ -40,6 +41,7 @@ async def specific_book_query_param(name:str):
         return book
    return None
 
+
 # Post methods
 @app.post("/create_book")
 async def postBook(new_book:BookRequest):
@@ -48,10 +50,12 @@ async def postBook(new_book:BookRequest):
     print(new_book)
     return books
 
+
 # Put methods
 @app.put("/update_book")
 async def updated_book(updated_book:BookRequest):
    print(updated_book)
    return books
+
 if __name__=="__main__":
     uvicorn.run("app:app",host="0.0.0.0",reload=True)
