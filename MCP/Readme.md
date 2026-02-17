@@ -15,4 +15,5 @@ graph TD;
     B[LLM] --> A[I/P MCP Host]
     A[I/P MCP Host] --> C[MCP Servers]
     C[MCP Servers] --> A[I/P MCP Host] 
+    
 ```
