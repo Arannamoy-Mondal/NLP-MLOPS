@@ -7,6 +7,7 @@
 - [Run jupyterlab inside podman or docker with anaconda on ubuntu](#run-jupyterlab-inside-podman-with-anaconda-on-ubuntu)
 - [CPU frequency control in ubuntu server](#cpu-frequency-control-in-ubuntu-server)
 - Online resources. Colah's blog
+- 
 # Proxmox set up for gpu passthrough
 #### 🛠️ Edit GRUB
 - Open the GRUB configuration file:
@@ -473,4 +474,26 @@ models:
       - chat
       - edit
       - apply
+```
+
+
+# Set a default env in anaconda
+
+```bash
+conda config --show auto_activate
+conda config --set auto_activate_base false
+```
+
+- Close the terminal and reopen terminal
+
+```bash
+echo "conda activate conda-env-3-12" >> ~/.bashrc
+```
+
+- Close the terminal and reopen terminal
+
+# Remove a conda env
+```bash
+conda deactivate
+conda remove --name conda-env-3-12 --all
 ```
