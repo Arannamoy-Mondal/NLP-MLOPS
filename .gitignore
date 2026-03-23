@@ -21,3 +21,4 @@ logs
 *.pdf
 faiss_index
 *.db
+

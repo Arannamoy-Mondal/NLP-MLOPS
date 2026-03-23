@@ -534,9 +534,45 @@ H[Cloud Storage]-->I[Big Data Engineering]
 ```mermaid
 graph TD;
 A0[Data Preparation] --> A2[EDA]
+A2[EDA] --> A[Feature Engineering]
 A[Feature Engineering] --> B[Feature Selection]
 B[Feature Selection] --> C[Model Creation And Hyper Param Tuning]
 C[Model Creation And Hyper Param Tuning] --> D0[Model Validation]
 D0[Model Validation] --> D[Model Deployment]
 D[Model Deployment] --> E[Model Monitoring And Retraining]
+```
+
+# mlflow
+- serving play --> input
+
+```bash
+mlflow ui
+```
+
+```python
+import mlflow
+mlflow.set_tracking_uri("http://127.0.0.1:5000")
+mlflow.set_experiment(experiment_name="000 set up.ipynb")
+with mlflow.start_run():
+    model=LogisticRegression()
+    model.fit(X_test,y_test)
+    y_pred=model.predict(X_train)
+    accuracy=accuracy_score(y_pred,y_train)
+    signature=infer_signature(X_test,model.predict(X_train))
+    mlflow.log_input(dataset=mlflow.data.from_numpy(X_test,"iris_dataset"),context="iris_dataset")
+    mlflow.set_tag("Training Info","Basic LR model for iris dataset")
+    model_info=mlflow.sklearn.log_model(
+        sk_model=model,
+        signature=signature,
+        artifact_path="iris_model",
+        input_example=X_test,
+        registered_model_name="000 set up"
+    )
+```
+
+`load model`
+
+```python
+model=mlflow.pyfunc.load_model(model_info.model_uri)
+
 ```
