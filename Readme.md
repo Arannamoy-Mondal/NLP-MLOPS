@@ -532,9 +532,11 @@ H[Cloud Storage]-->I[Big Data Engineering]
 # Life Cycle Of Data Science Project
 
 ```mermaid
-graph LR;
+graph TD;
+A0[Data Preparation] --> A2[EDA]
 A[Feature Engineering] --> B[Feature Selection]
 B[Feature Selection] --> C[Model Creation And Hyper Param Tuning]
-C[Model Creation And Hyper Param Tuning] --> D[Model Deployment]
+C[Model Creation And Hyper Param Tuning] --> D0[Model Validation]
+D0[Model Validation] --> D[Model Deployment]
 D[Model Deployment] --> E[Model Monitoring And Retraining]
 ```
