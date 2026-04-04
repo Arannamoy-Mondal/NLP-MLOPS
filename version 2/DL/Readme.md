@@ -44,3 +44,40 @@ x3[Basic Input] --> SM[Summation and Bias]
 SM[Summation and Bias]  --> A1[Activation Function]
 A1[Activation Function] --> Y[Output]
 ```
+
+
+## Weight updating formula
+$$w_new=w_{old}+\eta(y-\hat{y})x_i$$
+
+## Bias updating formula
+
+$$b_new=b_{old}+\eta(y-\hat{y})$$
+
+
+## Sample Perceptron Example
+
+```py
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split  
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import Perceptron
+from sklearn.metrics import accuracy_score,classification_report
+iris=load_iris()
+x=iris.data
+y=iris.target
+print(x)
+print(y)
+y_binary=np.where(y==0,0,1)
+print(y_binary)
+X_train,X_test,y_train,y_test=train_test_split(x,y_binary,test_size=0.2,random_state=42)
+scaler=StandardScaler()
+X_train=scaler.fit_transform(X_train)
+X_test=scaler.transform(X_test)
+perceptron=Perceptron(max_iter=1000,  eta0=0.01)
+perceptron.fit(X_train,y_train)
+y_pred_train=perceptron.predict(X_train)
+y_pred_test=perceptron.predict(X_test)
+print("Train acc:",accuracy_score(y_train,y_pred_train))
+print("Test acc:",accuracy_score(y_test,y_pred_test))
+```
