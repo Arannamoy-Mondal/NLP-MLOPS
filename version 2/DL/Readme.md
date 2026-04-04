@@ -41,13 +41,67 @@ graph LR;
 x1[Basic Input] --> SM[Summation and Bias]
 x2[Basic Input] --> SM[Summation and Bias]
 x3[Basic Input] --> SM[Summation and Bias]
-SM[Summation and Bias]  --> A1[Activation Function]
+SM[Summation and Bias]  --> A1[Activation Function or Linear Function]
 A1[Activation Function] --> Y[Output]
 ```
 
 
 ## Weight updating formula
 $$w_new=w_{old}+\eta(y-\hat{y})x_i$$
+
+- $\eta$ learning rate
+- y actual value
+- $\hat{y}$ predicted value
+- $y-\hat{y}$ error
+- $x_i$ input vector 
+
+> There is a similarity between Gradient descent and weight updating formula.
+> Gradient descent.
+$$w_{new}=w_{old}+\eta\frac{\delta W}{\delta W}$$
+
+- Logical Gate: and, or, xor, nor
+
+
+
+- AND Gate:
+
+|case|$x_1$|$x_2$|Output|
+|---|--|---|---|
+|case 1|0|0|0|
+|case 2|0|1|0|
+|case 3|1|0|0|
+|case 4|1|1|1|
+
+here w1=1.2,w2=0.6, $\eta$=0.5,threshold=1
+- neural network
+```mermaid
+graph LR;
+x1((x1)) --> s((summation))
+x2((x2)) --> s((summation))
+s((summation)) --> a((activation function))
+a((activation function)) --> o((output))
+```
+
+case 1:
+$w_1*x_1+w_2*x_2=0$
+
+case 2:
+$w_1*x_1+w_2*x_2=0.6 < threshold$
+
+case 3:
+
+for 1st epoch:
+
+$w_1*x_1+w_2*x_2=1.2 > threshold$
+here y=0 but $\hat y=1$ so, $w_{new1}=w_{old}+0.5*(-1)*1=0.7$ and $w_{new2}=w_{old}+0.5*(0)*0=0$
+
+for 2nd epoch:
+
+$\sum=w_1*x_1+w_2*x_2=0.7$ 
+
+case 4:
+$w_1*x_1+w_2*x_2=1.8 > threshold$
+
 
 ## Bias updating formula
 
@@ -81,3 +135,18 @@ y_pred_test=perceptron.predict(X_test)
 print("Train acc:",accuracy_score(y_train,y_pred_train))
 print("Test acc:",accuracy_score(y_test,y_pred_test))
 ```
+
+## Grokking Deep Learning By Andrew W. Trask
+
+## What is perceptron?
+- Supervised machine learning algorithm
+
+## What is weight?
+- Importance on input
+
+## What is bias?
+- base value of a model. start from 10 , in worth case but not fixed learn from data.
+- High bias --> Model Underfitting. Too simple, not catch the pattern
+- low bias --> Flexible, catch the pattern
+
+
