@@ -41,7 +41,7 @@ $(x,y) ---> x\epsilon R^n, y \epsilon {0,1}$
 - two or more spiral classification
 
 ## Polar co-ordinate vs Cartesian co-ordinate
-- (r,$\theta$) vs (x,y)
+- (r, $\theta$ ) vs (x,y)
 - $r=(x^2+y^2)^\frac{1}{2}, \theta=tan^-1\frac{y}{x}$
 - x=r $sin\theta$, y=r $cos\theta$
 
@@ -60,7 +60,7 @@ A1[Activation Function] --> Y[Output]
 
 
 ## Weight updating formula
-$$w_new=w_{old}+\eta(y-\hat{y})x_i$$
+$$w_{new}=w_{old}+\eta(y-\hat{y})x_i$$
 
 - $\eta$ learning rate
 - y actual value
@@ -118,7 +118,7 @@ $w_1*x_1+w_2*x_2=1.8 > threshold$
 
 ## Bias updating formula
 
-$$b_new=b_{old}+\eta(y-\hat{y})$$
+$$b_{new}=b_{old}+\eta(y-\hat{y})$$
 
 
 ## Sample Perceptron Example
@@ -177,3 +177,4 @@ print("Test acc:",accuracy_score(y_test,y_pred_test))
 - low bias --> Flexible, catch the pattern
 
 
+## What is decision boundaries?
