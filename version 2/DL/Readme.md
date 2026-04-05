@@ -1,3 +1,16 @@
+```mermaid
+graph LR;
+d((DL)) --> r((Sequence: RNN, LSTM, GRU))
+d((DL)) --> c((Foundation: CNN))
+d((DL)) --> t((Attention: Transformer))
+d((DL)) --> l((Attention: LLM))
+d((DL)) --> a((Autoencoder))
+d((DL)) --> v1((Generative: VAE Variational Autoencoders))
+d((DL)) --> g1((Generative: GAN Generative Adversial Network))
+d((DL)) --> g2((Generative: GNN Graph Neural Network))
+```
+
+
 |Application|Neural Network |
 |-----------|---------|
 | Real state |Standard NN|
@@ -148,6 +161,7 @@ print("Test acc:",accuracy_score(y_test,y_pred_test))
 
 ## What is the key limitation of a single-layer Perceptron?
 - Can not learn non linear boundaries
+
 
 ## Grokking Deep Learning By Andrew W. Trask
 
