@@ -135,6 +135,19 @@ y_pred_test=perceptron.predict(X_test)
 print("Train acc:",accuracy_score(y_train,y_pred_train))
 print("Test acc:",accuracy_score(y_test,y_pred_test))
 ```
+## Why is XOR gate difficult for a single Perceptron?
+- It is not linearly separable
+## Which gate can be solved by a single-layer Perceptron?
+- AND
+
+## What does the learning rate control in weight update?
+- Speed of learning
+
+## In Perceptron weight update, which factor indicates the error?
+- Actual Output - Predicted Output
+
+## What is the key limitation of a single-layer Perceptron?
+- Can not learn non linear boundaries
 
 ## Grokking Deep Learning By Andrew W. Trask
 
