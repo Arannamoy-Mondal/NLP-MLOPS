@@ -1,7 +1,7 @@
 ```mermaid
-graph LR;
-d((DL)) --> r((Sequence: RNN, LSTM, GRU))
+graph TD;
 d((DL)) --> c((Foundation: CNN))
+d((DL)) --> r((Sequence: RNN, LSTM, GRU))
 d((DL)) --> t((Attention: Transformer))
 d((DL)) --> l((Attention: LLM))
 d((DL)) --> a((Autoencoder))
