@@ -196,9 +196,9 @@ $b_{new}=b_{old}-slope$ , when slope (+)ve
 
 $b_{new}=b_{old}+slope$ , when slope (-)ve
 
-$b_{new}=b_{old}-\eta slope$
+$b_{new}=b_{old}-\eta * slope$
 
-$b_{new}=b_{old}+\eta slope$
+$b_{new}=b_{old}+\eta * slope$
 
 $b_{new}=b_{old}-\eta*\frac{\delta y}{\delta x}$
 $$
