@@ -242,3 +242,64 @@ gd=GDRegressor(0.001,50)
 gd.fit(X_train,y_train)
 print(r2_score(y_test,gd.predict(X_test)))
 ```
+
+## Why perceptron algorithm use classed -1 and 1 instead of 0 and 1? explain how this choice affect perceptron update rule.
+- Because 0 and 1 is not symmetric but -1 and 1 symmetric. If $f(x)=sign(w.x) $ and original class y. If model predict correct then y and f(x) will be same sign otherwise different. But if we use 0 and 1 in both case y=0 and for this model is correct or incorrect we can not define.
+
+- Perceptron update rule, 
+$$w_{new}=w_{old}+\eta (y-\hat{y})x_i$$
+
+$$=> w_{new}=w_{old}+\eta (0-1)x_i$$
+
+$$=> w_{new}=w_{old}+yx [more simplifying]$$
+
+## Gradient descent usually updates weights by subtracting the gradient. Why does the perceptron update rule add the term ($\eta$,y,x) instead?
+
+- Gradient descent generally used to reduce cost function. Target is reducing cost function, so need to go opposite of the slope. So subtraction,
+
+$$w=w-\eta . \Delta(w)$$
+
+- Perceptron update rule,
+
+$$w_{new}=w_{old}+\eta (y-\hat{y})x_i$$
+
+here, add or subtraction depend on $y-\hat{y}$, if $y-\hat{y}$=-1 then subtraction otherwise add. so, perceptron update rule add the term always.
+
+
+## Explain in own words how the perceptron learning rule can be seen as a form of gradient descent. Also mention one limitation of the perceptron loss function.
+
+## What is activation function?
+- Activation function is a mathematical function that decide fired an aritificial neuron in a neural network or decide output will go next layer or not.
+
+## Sigmoid activation function
+$$\delta(x)=\frac{1}{1+e^{-x}}$$
+- Threshold value 0.5 and after derivation 0.25.
+- Output 0 to 1 whatever input does not matter.
+
+## Differentiation of sigmoid function
+
+$$\delta(x)=\frac{1}{1+e^{-x}}$$
+$$=> \frac{d}{dx}\frac{1}{1+e^{-x}}$$
+$$=> \frac{d}{dx}(1+e^{-x})^{-1}$$
+$$=> -(1+e^{-x})^{-2} \frac{d}{dx} (1+e^{-x}) $$
+$$=> -(1+e^{-x})^{-2} e^{-x} (-1)$$
+$$=> \frac{e^{-x}}{(1+e^{-x})^2}$$
+$$=> \frac{e^{-x}}{1+e^{-x}} \frac{1}{1+e^{-x}}$$
+$$=> \frac{e^{-x}+1-1}{1+e^{-x}} .\delta (x)$$
+$$=> (\frac{1+e^{-x}}{1+e^{-x}} - \frac{1}{1+e^{-x}}) .\delta (x)$$
+$$=> (1-\delta(x)).\delta (x)$$
+
+## ReLU (Rectified Linear Unit) activation function
+$$f(x)=max(0,x) where, x-> \inf $$
+- Output range 0 to infinity.
+
+## Tanh activation function
+$$\tan h=\frac{e^{-x}-e^{x}}{e^{-x}+e^{x}}$$
+$$\frac{d}{dx}(\tan h)=1- \tan^2h$$
+
+## Softmax activation function
+
+$$\delta (z_i)=\frac{e^{z_i}}{\sum^k_i e^{z_j}}$$
+- Output 0 to 1.
+
+## BCE Loss Function

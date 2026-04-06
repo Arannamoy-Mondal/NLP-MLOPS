@@ -1,15 +1,17 @@
 # Contents
-- [Proxmox set up for gpu passthrough](#proxmox-set-up-for-gpu-passthrough)
-- [Ubuntu server setup](#ubuntu-server--for-maxmimum-hardware-usage)
-- [nividia gpu power limit in ubuntu server](#nividia-gpu-power-limit-in-ubuntu)
-- [auto set gpu fan speed at boot](#auto-set-gpu-fan-speed-at-boot)
-- [using podman ubuntu fedora as a podman os vs code ssh for lightweight dev environments](#using-podman--ubuntufedora-as-a-podman-os-vs-code-ssh-for-lightweight-dev-environments)
-- [Run jupyterlab inside podman or docker with anaconda on ubuntu](#run-jupyterlab-inside-podman-with-anaconda-on-ubuntu)
-- [CPU frequency control in ubuntu server](#cpu-frequency-control-in-ubuntu-server)
-- Online resources. Colah's blog
-- [Confusion Matrix](#confusion-matrix)
-- [Data Science Project Task](#data-science-project-task)
-- [Life Cycle Of Data Science Project](#life-cycle-of-data-science-project)
+- Setup
+    - [Proxmox set up for gpu passthrough](#proxmox-set-up-for-gpu-passthrough)
+    - [Ubuntu server setup](#ubuntu-server--for-maxmimum-hardware-usage)
+    - [nividia gpu power limit in ubuntu server](#nividia-gpu-power-limit-in-ubuntu)
+    - [auto set gpu fan speed at boot](#auto-set-gpu-fan-speed-at-boot)
+    - [using podman ubuntu fedora as a podman os vs code ssh for lightweight dev environments](#using-podman--ubuntufedora-as-a-podman-os-vs-code-ssh-for-lightweight-dev-environments)
+    - [Run jupyterlab inside podman or docker with anaconda on ubuntu](#run-jupyterlab-inside-podman-with-anaconda-on-ubuntu)
+    - [CPU frequency control in ubuntu server](#cpu-frequency-control-in-ubuntu-server)
+    - Online resources. Colah's blog
+    - [Confusion Matrix](#confusion-matrix)
+    - [Data Science Project Task](#data-science-project-task)
+    - [Life Cycle Of Data Science Project](#life-cycle-of-data-science-project)
+- DL
 # Proxmox set up for gpu passthrough
 #### 🛠️ Edit GRUB
 - Open the GRUB configuration file:
