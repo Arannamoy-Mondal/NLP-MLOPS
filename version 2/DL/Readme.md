@@ -343,6 +343,7 @@ $$weight=weight_{ij}^k, \text{here k=layer number,i=source node, j=destination n
 - First layer linear calculation then apply activation function, then input for next layer and the process repeat until reaching output layer.
 
 - Prediction: $\delta(w^TX+b)$ here T means transpose.
+
 $$
 \begin{bmatrix}
 w^1_{11} & w^1_{21} & w^1_{31} \\
