@@ -310,24 +310,55 @@ $$\delta (z_i)=\frac{e^{z_i}}{\sum^k_i e^{z_j}}$$
 ## NN Notation
 ```mermaid
 graph LR;
-I1((X1))-->H1((H1))
-I1((X1))-->H2((H2))
-I1((X1))-->H3((H3))
-I2((X2))-->H1((H1))
-I2((X2))-->H2((H2))
-I2((X2))-->H3((H3))
-I3((X3))-->H1((H1))
-I3((X3))-->H2((H2))
-I3((X3))-->H3((H3))
-I4((X4)) -->H1((H1))
-I4((X4)) -->H2((H2))
-I4((X4)) -->H3((H3))
-H1((H1)) --> H11((H4))
-H1((H1)) --> H12((H5))
-H2((H2)) --> H11((H4))
-H2((H2)) --> H12((H5))
-H3((H3)) --> H11((H4))
-H3((H3)) --> H12((H5))
-H11((H4)) --> O((Output))
-H12((H5)) --> O((Output))
+I1((11))-->H1((21))
+I1((11))-->H2((22))
+I1((11))-->H3((23))
+I2((12))-->H1((21))
+I2((12))-->H2((22))
+I2((12))-->H3((23))
+I3((13))-->H1((21))
+I3((13))-->H2((22))
+I3((13))-->H3((23))
+I4((X4)) -->H1((21))
+I4((X4)) -->H2((22))
+I4((X4)) -->H3((23))
+H1((21)) --> H11((31))
+H1((21)) --> H12((32))
+H2((22)) --> H11((31))
+H2((22)) --> H12((32))
+H3((23)) --> H11((31))
+H3((23)) --> H12((32))
+H11((31)) --> O((Output))
+H12((32)) --> O((Output))
 ```
+- Notation
+$$bias=b_{ij}, \text{here i=layer number, j=node number of the layer}$$
+$$output=output_{ij}, \text{here i=layer number, j=node number of the layer}$$
+$$weight=weight_{ij}^k, \text{here k=layer number,i=source node, j=destination node}$$
+
+
+## Forward Propagation
+- Forward propagation is the process of computing the output of a neural network by successively applying linear transformations and activation functions from the imput layer to the output layer. 
+
+- First layer linear calculation then apply activation function, then input for next layer and the process repeat until reaching output layer.
+
+- Prediction: $\delta(w^TX+b)$ here T means transpose.
+$$
+\begin{bmatrix}
+w^1_{11} & w^1_{21} & w^1_{31} \\
+w^1_{12} & w^1_{22} & w^1_{31} \\
+w^1_{13} & w^1_{22} & w^1_{31} \\
+w^1_{14} & w^1_{22} & w^1_{31} 
+\end{bmatrix}^T 
+\begin{bmatrix}
+x_{11} \\
+x_{12} \\
+x_{13} \\
+x_{14} \\
+\end{bmatrix}+
+\begin{bmatrix}
+b_{11} \\
+b_{12} \\
+b_{13} \\
+\end{bmatrix}
+$$
