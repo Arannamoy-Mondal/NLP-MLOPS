@@ -342,7 +342,7 @@ $$weight=weight_{ij}^k, \text{here k=layer number,i=source node, j=destination n
 
 - First layer linear calculation then apply activation function, then input for next layer and the process repeat until reaching output layer.
 
-- Prediction: $\delta(w^TX+b)$ here T means transpose.
+- Prediction: $\delta(w^TX+b)$ here T means transpose, X= input layer matrix, w=input layer weight matrix.
 
 $$
 \begin{pmatrix}
@@ -363,3 +363,12 @@ b_{12} \\
 b_{13} \\
 \end{pmatrix}
 $$
+
+## What does a⁽l⁾ denote in MLP notation?
+- Activation output of layer $l$
+
+## What does b⁽l⁾ represent in neural network notation?
+- Bias vector of layer $l$
+
+## Which equation represents forward propagation for a layer?
+-  $a^{(l)} = \sigma(W^{(l)}a^{(l-1)} + b^{(l)})$ here $a^{(l-1)}$= input from previous layer,$W^{(l)}a^{(l-1)} + b^{(l)}$=combination of current layer weight and bias, $a^{(l)}$=final output of this layer
