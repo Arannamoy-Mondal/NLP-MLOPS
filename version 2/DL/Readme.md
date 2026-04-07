@@ -289,6 +289,8 @@ $$=> \frac{e^{-x}+1-1}{1+e^{-x}} .\delta (x)$$
 $$=> (\frac{1+e^{-x}}{1+e^{-x}} - \frac{1}{1+e^{-x}}) .\delta (x)$$
 $$=> (1-\delta(x)).\delta (x)$$
 
+- Output 0 to 1
+
 ## ReLU (Rectified Linear Unit) activation function
 $$f(x)=max(0,x) where, x-> \inf $$
 - Output range 0 to infinity.
@@ -297,9 +299,33 @@ $$f(x)=max(0,x) where, x-> \inf $$
 $$\tan h=\frac{e^{-x}-e^{x}}{e^{-x}+e^{x}}$$
 $$\frac{d}{dx}(\tan h)=1- \tan^2h$$
 
+- Output -1 to 1
+
 ## Softmax activation function
 
 $$\delta (z_i)=\frac{e^{z_i}}{\sum^k_i e^{z_j}}$$
 - Output 0 to 1.
 
 ## BCE Loss Function
+## NN Notation
+```mermaid
+graph LR;
+I1((X1))-->H1((H1))
+I1((X1))-->H2((H2))
+I1((X1))-->H3((H3))
+I2((X2))-->H1((H1))
+I2((X2))-->H2((H2))
+I2((X2))-->H3((H3))
+I3((X3))-->H1((H1))
+I3((X3))-->H2((H2))
+I3((X3))-->H3((H3))
+I4((X4)) -->H1((H1))
+I4((X4)) -->H2((H2))
+I4((X4)) -->H3((H3))
+H1((H1)) --> H11((H4))
+H1((H1)) --> H12((H5))
+H2((H2)) --> H11((H4))
+H2((H2)) --> H12((H5))
+H3((H3)) --> H11((H4))
+H3((H3)) --> H12((H5))
+```
