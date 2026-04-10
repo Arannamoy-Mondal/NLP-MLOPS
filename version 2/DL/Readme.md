@@ -306,7 +306,17 @@ $$\frac{d}{dx}(\tan h)=1- \tan^2h$$
 $$\delta (z_i)=\frac{e^{z_i}}{\sum^k_i e^{z_j}}$$
 - Output 0 to 1.
 
-## BCE Loss Function
+|Loss Function|Purpose|
+|-----------|---------|
+| BCE Loss |Classification|
+| CrossEntropy Loss|Classification|
+| Hinge Loss|Classification|
+|MSE Loss|Regression|
+|MAE Loss|Regression|
+|Huber Loss|Regression|
+|KL Divergence Loss|Autoencoder|
+|Discriminator Loss|GAN|
+|Min Max Loss| GAN|
 ## NN Notation
 ```mermaid
 graph LR;
