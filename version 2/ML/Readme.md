@@ -13,7 +13,7 @@
     - Hierachical Cluster Analysis
 - Anomaly detection and novelty detection
     - One Class SVM
-    -Isolation Forest
+    - Isolation Forest
 - Visualization and dimensionality reduction
     - Principal Component Analysis (PCA)
     - Kernel PCA
