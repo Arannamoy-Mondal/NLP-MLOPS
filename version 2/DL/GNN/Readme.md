@@ -2,6 +2,8 @@
 
 ### Stanford CS224W: Machine Learning with Graphs -> https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn
 
+
+### https://distill.pub/2021/gnn-intro/?utm_source=chatgpt.com
 ### Books
 - Hands-On-Graph-Neural-Networks-Using-Python
 - Deep Learning for the Life Sciences: Applying Deep Learning to Genomics, Microscopy, Drug Discovery, and More
