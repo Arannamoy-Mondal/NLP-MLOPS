@@ -1,4 +1,6 @@
-### https://www.youtube.com/watch?v=0YLZXjMHA-8&list=PLV8yxwGOxvvoNkzPfCx2i8an--Tkt7O8Z&index=1
+### DeepFindr ->https://www.youtube.com/watch?v=0YLZXjMHA-8&list=PLV8yxwGOxvvoNkzPfCx2i8an--Tkt7O8Z&index=1
+
+### Stanford CS224W: Machine Learning with Graphs -> https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn
 
 ### Books
 - Hands-On-Graph-Neural-Networks-Using-Python
