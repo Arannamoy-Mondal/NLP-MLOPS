@@ -432,3 +432,6 @@ $$
 - Dive into Deep Learning -> https://d2l.ai/
 - Deep Learning -> https://www.deeplearningbook.org/
 - Deep Learning with Python -> https://deeplearningwithpython.io/chapters/
+- Deep Learning for Coders with fastai and PyTorch
+- Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow
+- Natural Language Processing with Transformers
